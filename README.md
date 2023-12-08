@@ -26,6 +26,12 @@ A technical assessment exercise for Developer candidates
 - Postgre
 
 
+### Screenshots
+![product listing api](./docs/images/backend2.png)
+![graphql api](./docs/images/backend1.png)
+![frontend](./docs/images/frontend.png)
+
+
 ### Steps
 - Formatted and cleaned sample data
 - Spin up Django / Graphene
