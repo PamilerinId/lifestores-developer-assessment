@@ -6,7 +6,7 @@ A technical assessment exercise for Developer candidates
 - update `.env.dev` file to `.env`
 - cd ..
 - run `docker compose up`
-- run `docker-compose run api manage.py loaddata products`
+- run `python manage.py loaddata products` inside `api` container or 
 - access `graphql api` at `localhost:8000/graphql`
 - access `frontend` at `localhost:3000`
 
