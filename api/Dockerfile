@@ -23,12 +23,12 @@ ENV PYTHONUNBUFFERED 1
 
 # install dependencies
 RUN pip install --upgrade pip
-COPY api/requirements.txt .
+COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # copy project
-COPY api/. .
-COPY api/.env .
+COPY . .
+COPY .env .
 
 RUN chown -R www-data:www-data /usr/src/app
 

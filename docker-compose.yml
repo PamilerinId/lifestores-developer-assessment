@@ -21,10 +21,10 @@ services:
              python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
     build: 
-      context: .
-      dockerfile: dockerfiles/backend/Dockerfile
+      context: ./api
+      dockerfile: Dockerfile
     volumes:
-      - ./backend:/usr/src/app/backend
+      - ./api:/usr/src/app/backend
     ports:
       - 8000:8000
     env_file:
@@ -35,8 +35,8 @@ services:
   frontend:
     restart: always
     build: 
-      context: .
-      dockerfile: dockerfiles/frontend/Dockerfile
+      context: ./frontend
+      dockerfile: Dockerfile
     volumes:
       - ./frontend:/usr/src/app/frontend
     ports:
