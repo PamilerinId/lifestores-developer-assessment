@@ -1,18 +1,16 @@
 # developer-assessment
 A technical assessment exercise for Developer candidates
 
-The purpose of this exercise is to assess your ability across several skills including;
+## How to Run project
+- cd `api/` folder
+- update `.env.dev` file to `.env`
+- cd ..
+- run `docker compose up`
+- run `docker-compose run api manage.py loaddata products`
+- access `graphql api` at `localhost:8000/graphql`
+- access `frontend` at `localhost:3000`
 
-- Time management and prioritisation
-- Code organisation
-- Familiarity with the core technologies
-- Documentation
-
-You are not necessarily required to complete the exercise but we encourage spending at least 4 hours to showcase as much as you can.
-
-If you have any questions please email developers@lifestoreshealthcare.com
-
-##Technologies
+## Technologies
 
 #### Frontend
 - REACTJS
@@ -23,6 +21,30 @@ If you have any questions please email developers@lifestoreshealthcare.com
 - Django
 - Graphene
 - Docker
+
+### DB
+- Postgre
+
+
+### Steps
+- Formatted and cleaned sample data
+- Spin up Django / Graphene
+- Dockerise api
+- Seed db with sample data
+- Spin up react / apollo
+
+
+### Directory structure
+
+  - File `docker-compose.yml`: Orchestrate all containers settings
+  - Directory `dockerfiles`: 
+    - File `backend`: Dockerfile to setup Django
+    - File `frontend`: Dockerfile to install Reactjs requirements
+  - File `README.md`: You are here :)
+  - Directory :
+    - Directory `api`: Here is the Django + Graphene project.
+    - Drirectory `frontend`: Here is the React project.
+
 
 ##### Test:
 Given the Product data below: 
@@ -75,10 +97,4 @@ d) Allow increment(+), decrement(-) and delete functionality on each cart item i
 Once complete share instructions on how we can review the code and run
 the application.
 
-#### EVALUATION CRITERIA
-Your solution will be evaluated for:
-1. Design/Architecture Quality
-2. Code Quality
-3. User Experience (Frontend)
-4. DB Migration
-5. Tests
+
