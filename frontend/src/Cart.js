@@ -1,9 +1,17 @@
 import { gql, useQuery } from "@apollo/client";
 
 const GET_CART_ITEMS = gql`
-    query GetCartItems { 
-        cartItems @client
-    }
+    query getProductList {
+        productList {
+          id
+          name
+          description
+          image
+          price
+          sku
+          updatedAt
+        }
+      }
 `
 
 
